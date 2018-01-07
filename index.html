@@ -25,7 +25,35 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h1><span>(r)</span>Evolution of set-top boxes UI</h1>
+					<h1><span class="emphasis">(r)</span>Evolution of set-top boxes UI</h1>
+					<div style="text-align: right; margin-top: 200px; font-size: .8em;">
+						<p><a href="https://kirilknysh.github.io/">Kiril Knysh</a></p>
+						<p>21/23, EPAM Systems</p>
+					</div>
+					<aside class="notes">
+						Landing
+					</aside>
+				</section>
+				<section>
+					<section>
+						<h2>What is <span class="emphasis">STB</span>?</h2>
+						<aside class="notes">
+							Who knows what is set-top box?
+						</aside>
+					</section>
+					<section>
+						<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10vh;">
+							<img class="fragment plain" style="width: 40vw;" src="img/old-tv.png" />
+							<img class="fragment plain" style="width: 20vw;" src="img/dawn-stb.png" />
+						</div>
+						<img class="fragment fade-up plain" style="position: absolute; width: 70%; left: 15%; top: 40%;" src="img/smart-tv.png" />
+						<aside class="notes">
+							Set-top box is a box that allows to covert an old-fashioned TV into kind of Smart TV.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<p class="huge emphasis">?</p>
 				</section>
 			</div>
 		</div>
@@ -38,12 +66,14 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				transition: 'zoom',
+				history: true,
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
+					// Zoom in and out with Alt+click
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				],
 			});
 		</script>
 	</body>
