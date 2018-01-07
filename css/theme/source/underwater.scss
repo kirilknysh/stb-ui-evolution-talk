@@ -1,7 +1,7 @@
 /**
- * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ * Underwater theme for reveal.js.
  *
- * By Hakim El Hattab, http://hakim.se
+ * By Kiril Knysh, https://kirilknysh.github.io/
  */
 
 
@@ -12,7 +12,7 @@
 
 
 // Include theme-specific fonts
-@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import url(../../lib/font/Montserrat/Montserrat.css);
 
 
 // Override theme settings (see ../template/settings.scss)
@@ -22,11 +22,8 @@ $mainColor: #fff;
 $headingColor: #fff;
 
 $mainFontSize: 42px;
-$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
-$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
-$headingTextShadow: none;
-$headingLetterSpacing: normal;
-$headingTextTransform: uppercase;
+$mainFont: Montserrat, Helvetica, sans-serif;
+$headingFont: Montserrat, Helvetica, sans-serif;
 $headingFontWeight: 600;
 $linkColor: #4e8389;
 $linkColorHover: lighten( $linkColor, 15% );
