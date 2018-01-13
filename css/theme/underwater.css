@@ -10,8 +10,17 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .emphasis {
   color: #7ca7ad; }
 
+.pros {
+  color: #2cab49; }
+
+.cons {
+  color: #a52626; }
+
 .reveal .huge {
   font-size: 7em; }
+
+.reveal .big {
+  font-size: 5em; }
 
 .reveal a {
   text-decoration: underline !important; }

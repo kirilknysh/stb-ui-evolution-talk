@@ -54,13 +54,14 @@
 					<section>
 						<h2>What is <span class="emphasis">(UI technically)</span> STB?</h2>
 						<ol>
-							<li>handle keys (RCU, mobile device, ...)</li>
 							<li>render UI</li>
+							<li>react on keys (RCU, mobile device, ...)</li>
 						</ol>
 					</section>
 				</section>
 				<section>
 					<h3>A <span class="emphasis">long time ago</span> in a galaxy far, far away...</h3>
+					// RCU -> server -> STB UI
 				</section>
 				<section>
 					<h3><span class="emphasis">Typed</span> way</h3>
@@ -85,9 +86,55 @@
 					</section>
 					<section>
 						<h4>Qt Browser</h4>
+						<ul>
+							<li class="fragment pros">WebKit under the hood</li>
+							<li class="fragment pros">remote web inspector</li>
+							<li class="fragment">Nokia Qt framework</li>
+							<li class="fragment cons">last release in 2013</li>
+							<li class="fragment cons">not "web-friendly"</li>
+							<li class="fragment cons">Browser + UI = ~200mb RAM</li>
+						</ul>
+						<aside class="notes">
+							Non-web events (e.g. keys), a lot of specific things, bugs, memory leaks
+						</aside>
 					</section>
 					<section>
 						<h4>WPE</h4>
+						<ul>
+							<li class="fragment pros">WebKit fork</li>
+							<li class="fragment pros">remote web inspector</li>
+							<li class="fragment pros">last commit 3 days ago</li>
+							<li class="fragment pros">more "web-friendly"</li>
+						</ul>
+						<aside class="notes">
+							improved memory consumption, key events as W3C events
+						</aside>
+					</section>
+					<section>
+						<h4><span class="emphasis">Browser</span> UI evolution</h4>
+						<div style="display: flex; align-items: center; justify-content: space-between;">
+							<img class="fragment plain" style="width: 20vw;" src="img/backbone-logo.png" />
+							<span class="fragment big">→</span>
+							<img class="fragment plain" style="width: 20vw;" src="img/custom.png" />
+							<span class="fragment big">→</span>
+							<img class="fragment plain" style="width: 20vw;" src="img/react-logo.png" />
+						</div>
+					</section>
+					<section>
+						<h4>Typical <span class="emphasis">dev</span> environment</h4>
+						<img class="plain" src="img/browser-workspace.gif" />
+						<aside class="notes">
+							STB as a reverse proxy
+						</aside>
+					</section>
+					<section>
+						<h4><span class="emphasis">Lessons</span> we've learned</h4>
+						<ul>
+							<li class="fragment">workarounds are the must 😿</li>
+							<li class="fragment">"But it works in Chrome/Safari/..." means nothing</li>
+							<li class="fragment">memory leaks ARE important</li>
+							<li class="fragment">how WebKit JSC works</li>
+						</ul>
 					</section>
 				</section>
 				<section>
@@ -103,7 +150,18 @@
 					</aside>
 				</section>
 				<section>
-					<h3>Present and <span class="emphasis">future</span></h3>
+					<section>
+						<h3><span class="emphasis">Present</span> and future</h3>
+						EFL + nodejs
+					</section>
+					<section>
+						<h4>Typical <span class="emphasis">dev</span> environment</h4>
+						<img class="plain" style="height: 70vh;" src="img/efl-workspace.gif" />
+					</section>
+					<section>
+						<h3>Present and <span class="emphasis">future</span></h3>
+						games on backend
+					</section>
 				</section>
 				<section>
 					<p class="huge emphasis">?</p>
