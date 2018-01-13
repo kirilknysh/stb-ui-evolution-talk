@@ -21,7 +21,7 @@ $backgroundColor: #222;
 $mainColor: #fff;
 $headingColor: #fff;
 
-$mainFontSize: 42px;
+$mainFontSize: 38px;
 $mainFont: Montserrat, Helvetica, sans-serif;
 $headingFont: Montserrat, Helvetica, sans-serif;
 $headingFontWeight: 600;
@@ -48,6 +48,9 @@ section.has-light-background {
 	font-size: 7em;
 }
 
+.reveal a {
+	text-decoration: underline!important;
+}
 
 // Theme template ------------------------------
 @import "../template/theme";
