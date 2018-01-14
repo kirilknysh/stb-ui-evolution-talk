@@ -49,6 +49,7 @@
 						<img class="fragment fade-up plain" style="position: absolute; width: 70%; left: 15%; top: 40%;" src="img/smart-tv.png" />
 						<aside class="notes">
 							Set-top box is a box that allows to covert an old-fashioned TV into kind of Smart TV. But what is STB from UI developer point of view?
+							VOD store, PVRs, search, replay tv, ...
 						</aside>
 					</section>
 					<section>
@@ -61,7 +62,7 @@
 				</section>
 				<section>
 					<h3>A <span class="emphasis">long time ago</span> in a galaxy far, far away...</h3>
-					// RCU -> server -> STB UI
+					// TODO: RCU -> server -> STB UI
 				</section>
 				<section>
 					<h3><span class="emphasis">Typed</span> way</h3>
@@ -152,7 +153,26 @@
 				<section>
 					<section>
 						<h3><span class="emphasis">Present</span> and future</h3>
-						EFL + nodejs
+						<h4 class="fragment"><a href="https://www.enlightenment.org/about-efl.md">efl</a></h4>
+						<img class="fragment" src="img/efllibs.png" />
+						<aside class="notes">
+							Enlightenment Foundation Libraries; open source, mainly maintained by Samsung
+						</aside>
+					</section>
+					<section>
+						<h3>efl</h3>
+						<ul>
+							<li class="fragment">written in C</li>
+							<li class="fragment">bindings to C++ / Python / JS</li>
+							<li class="fragment">already in use by <a href="http://www.free.fr/freebox/index.html">free.fr</a>; Samsung Watches, Smart TV, refrigerators (<a href="https://developer.tizen.org/development/guides/native-application/user-interface/efl">Tizen</a> based)</li>
+							<li class="fragment cons">still needs to be patched</li>
+						</ul>
+						<aside class="notes">
+							free.fr - french STBs
+						</aside>
+					</section>
+					<section>
+						// TODO: example of EFL node (code)
 					</section>
 					<section>
 						<h4>Typical <span class="emphasis">dev</span> environment</h4>
@@ -160,11 +180,25 @@
 					</section>
 					<section>
 						<h3>Present and <span class="emphasis">future</span></h3>
-						games on backend
+						<ul>
+							<li class="fragment">3rd party applications</li>
+							<li class="fragment">Cloud gaming
+								<ul>
+									<li><a href="http://www.nvidia.com/object/cloud-gaming.html">NVIDIA GRID</a></li>
+									<li><a href="http://gaminganywhere.org">GamingAnywhere</a></li>
+									<li><a href="https://www.paperspace.com/gaming">Paperspace</a></li>
+									<li><a href="https://liquidsky.com/">Liquidsky</a></li>
+								</ul>
+							</li>
+						</ul>
+						<aside class="notes">
+							3rd party applications: twitter, games, news, ...
+							POC of connected XBOX controller + cloud gaming
+						</aside>
 					</section>
 				</section>
 				<section>
-					<p class="huge emphasis">?</p>
+					<p class="huge emphasis">Thanks</p>
 				</section>
 			</div>
 		</div>
