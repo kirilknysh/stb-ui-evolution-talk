@@ -62,7 +62,7 @@
 				</section>
 				<section>
 					<h3>A <span class="emphasis">long time ago</span> in a galaxy far, far away...</h3>
-					// TODO: RCU -> server -> STB UI
+					<img class="plain" style="height: 60vh;" src="img/long-time-ago.gif" />
 				</section>
 				<section>
 					<h3><span class="emphasis">Typed</span> way</h3>
@@ -114,11 +114,11 @@
 					<section>
 						<h4><span class="emphasis">Browser</span> UI evolution</h4>
 						<div style="display: flex; align-items: center; justify-content: space-between;">
-							<img class="fragment plain" style="width: 20vw;" src="img/backbone-logo.png" />
+							<img class="fragment plain" style="width: 17vw;" src="img/backbone-logo.png" />
 							<span class="fragment big">→</span>
-							<img class="fragment plain" style="width: 20vw;" src="img/custom.png" />
+							<img class="fragment plain" style="width: 17vw;" src="img/custom.png" />
 							<span class="fragment big">→</span>
-							<img class="fragment plain" style="width: 20vw;" src="img/react-logo.png" />
+							<img class="fragment plain" style="width: 17vw;" src="img/react-logo.png" />
 						</div>
 					</section>
 					<section>
@@ -139,16 +139,22 @@
 					</section>
 				</section>
 				<section>
-					<h3>Back to <span class="emphasis">basics</span></h3>
-					<ul>
-						<li><a href="http://www.activevideo.com/">ActiveVideo</a></li>
-						<li><a href="https://gigaom.com/2014/06/11/comcast-to-test-its-youtube-competitor-by-the-end-of-the-year/">Comcast X1 box</a></li>
-						<li><a href="http://www.entrixco.com/">Entrix</a></li>
-						<li>...</li>
-					</ul>
-					<aside class="notes">
-						Netflix and YouTube also want to be “on TV” (https://gigaom.com/2014/06/18/youtube-is-coming-to-cable-tv-set-top-boxes-with-a-little-help-from-the-cloud/)
-					</aside>
+					<section>
+						<h3>Back to <span class="emphasis">basics</span></h3>
+						<ul>
+							<li><a href="http://www.activevideo.com/">ActiveVideo</a></li>
+							<li><a href="https://gigaom.com/2014/06/11/comcast-to-test-its-youtube-competitor-by-the-end-of-the-year/">Comcast X1 box</a></li>
+							<li><a href="http://www.entrixco.com/">Entrix</a></li>
+							<li>...</li>
+						</ul>
+						<aside class="notes">
+							Netflix and YouTube also want to be “on TV” (https://gigaom.com/2014/06/18/youtube-is-coming-to-cable-tv-set-top-boxes-with-a-little-help-from-the-cloud/)
+						</aside>
+					</section>
+					<section>
+						<h4><span class="emphasis">2-way</span> rendering</h4>
+						<img class="plain" style="height: 60vh;" src="img/back-to-basics.gif" />
+					</section>
 				</section>
 				<section>
 					<section>
@@ -172,7 +178,45 @@
 						</aside>
 					</section>
 					<section>
-						// TODO: example of EFL node (code)
+						<h4>Text with background</h4>
+						const Node = require('shared/Node');
+						const AWC = require('network/Awc.Network');
+						AWC.init();
+
+						const bg = new Node({ id: 'bg', width: 1920, height: 1080 });
+						bg.setBackgroundColorWithOpacity({ r: 255, g: 0, b: 0, a: 255 });
+						bg.setVisible(true);
+
+						const textBg = new Node({ parent: bg, width: 800, height: 800, id: 'textBg' });
+
+						const textBlack = new Node({ parent: textBg, width: 800, height: 80, id: 'textBlack' });
+						textBlack.setLeft(30);
+						textBlack.setTop(30);
+						textBlack.setText('Gdańsk');
+						textBlack.setFontFamily('InterstatePro');
+						textBlack.setFontSize(60);
+						textBlack.setFontColorWithOpacity({ r: 0, g: 0, b: 0, a: 255 });
+					</section>
+					<section>
+						<h4>Text with background</h4>
+						// TODO image
+						<pre style="width: 100%;"><code style="max-height: 70vh;" data-trim data-noescape>
+const Node = require('shared/Node');
+
+const bg = new Node({ id: 'bg', width: 1920, height: 1080 });
+bg.setBackgroundColorWithOpacity({ r: 255, g: 0, b: 0, a: 255 });
+bg.setVisible(true);
+
+const textBg = new Node({ parent: bg, width: 800, height: 800, id: 'textBg' });
+
+const textBlack = new Node({ parent: textBg, width: 800, height: 80, id: 'textBlack' });
+textBlack.setLeft(30);
+textBlack.setTop(30);
+textBlack.setText('Gdańsk');
+textBlack.setFontFamily('InterstatePro');
+textBlack.setFontSize(60);
+textBlack.setFontColorWithOpacity({ r: 0, g: 0, b: 0, a: 255 });
+						</code></pre>
 					</section>
 					<section>
 						<h4>Typical <span class="emphasis">dev</span> environment</h4>
@@ -211,7 +255,7 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
-				transition: 'zoom',
+				transition: 'slide',
 				history: true,
 				dependencies: [
 					// Zoom in and out with Alt+click
