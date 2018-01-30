@@ -132,10 +132,13 @@
 						<h4><span class="emphasis">Lessons</span> we've learned</h4>
 						<ul>
 							<li class="fragment">workarounds are the must 😿</li>
-							<li class="fragment">"But it works in Chrome/Safari/..." means nothing</li>
+							<li class="fragment">redux store could be slow</li>
 							<li class="fragment">memory leaks ARE important</li>
 							<li class="fragment">how WebKit JSC works</li>
 						</ul>
+						<aside class="notes">
+							with a single store and 150+ reducers one action cycle may take up to 100ms on STB
+						</aside>
 					</section>
 				</section>
 				<section>
@@ -179,27 +182,10 @@
 					</section>
 					<section>
 						<h4>Text with background</h4>
-						const Node = require('shared/Node');
-						const AWC = require('network/Awc.Network');
-						AWC.init();
-
-						const bg = new Node({ id: 'bg', width: 1920, height: 1080 });
-						bg.setBackgroundColorWithOpacity({ r: 255, g: 0, b: 0, a: 255 });
-						bg.setVisible(true);
-
-						const textBg = new Node({ parent: bg, width: 800, height: 800, id: 'textBg' });
-
-						const textBlack = new Node({ parent: textBg, width: 800, height: 80, id: 'textBlack' });
-						textBlack.setLeft(30);
-						textBlack.setTop(30);
-						textBlack.setText('Gdańsk');
-						textBlack.setFontFamily('InterstatePro');
-						textBlack.setFontSize(60);
-						textBlack.setFontColorWithOpacity({ r: 0, g: 0, b: 0, a: 255 });
+						<img class="plain" src="img/efl-render.png" />
 					</section>
 					<section>
 						<h4>Text with background</h4>
-						// TODO image
 						<pre style="width: 100%;"><code style="max-height: 70vh;" data-trim data-noescape>
 const Node = require('shared/Node');
 
@@ -210,8 +196,8 @@ bg.setVisible(true);
 const textBg = new Node({ parent: bg, width: 800, height: 800, id: 'textBg' });
 
 const textBlack = new Node({ parent: textBg, width: 800, height: 80, id: 'textBlack' });
-textBlack.setLeft(30);
-textBlack.setTop(30);
+textBlack.setLeft(150);
+textBlack.setTop(150);
 textBlack.setText('Gdańsk');
 textBlack.setFontFamily('InterstatePro');
 textBlack.setFontSize(60);
