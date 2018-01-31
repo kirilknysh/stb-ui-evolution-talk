@@ -58,6 +58,7 @@
 							<li>render UI</li>
 							<li>react on keys (RCU, mobile device, ...)</li>
 						</ol>
+						<img class="fragment plain" src="img/easy_peasy.gif" />
 					</section>
 				</section>
 				<section>
@@ -104,8 +105,9 @@
 						<ul>
 							<li class="fragment pros">WebKit fork</li>
 							<li class="fragment pros">remote web inspector</li>
-							<li class="fragment pros">last commit 3 days ago</li>
+							<li class="fragment pros">last commit yesterday</li>
 							<li class="fragment pros">more "web-friendly"</li>
+							<li class="fragment cons">still ~180mb RAM</li>
 						</ul>
 						<aside class="notes">
 							improved memory consumption, key events as W3C events
@@ -120,6 +122,9 @@
 							<span class="fragment big">→</span>
 							<img class="fragment plain" style="width: 17vw;" src="img/react-logo.png" />
 						</div>
+						<aside class="notes">
+							React + redux
+						</aside>
 					</section>
 					<section>
 						<h4>Typical <span class="emphasis">dev</span> environment</h4>
@@ -151,12 +156,16 @@
 							<li>...</li>
 						</ul>
 						<aside class="notes">
-							Netflix and YouTube also want to be “on TV” (https://gigaom.com/2014/06/18/youtube-is-coming-to-cable-tv-set-top-boxes-with-a-little-help-from-the-cloud/)
+							the amount of devices grows, not all of them are fast enough
+							combination of local rendering + remote render for web apps (when browser is too fat to fit the box)
 						</aside>
 					</section>
 					<section>
 						<h4><span class="emphasis">2-way</span> rendering</h4>
 						<img class="plain" style="height: 60vh;" src="img/back-to-basics.gif" />
+						<aside class="notes">
+							Netflix and YouTube also want to be “on TV” (https://gigaom.com/2014/06/18/youtube-is-coming-to-cable-tv-set-top-boxes-with-a-little-help-from-the-cloud/)
+						</aside>
 					</section>
 				</section>
 				<section>
@@ -178,6 +187,7 @@
 						</ul>
 						<aside class="notes">
 							free.fr - french STBs
+							for us, as developers, - means to create a Node.js application
 						</aside>
 					</section>
 					<section>
@@ -203,6 +213,9 @@ textBlack.setFontFamily('InterstatePro');
 textBlack.setFontSize(60);
 textBlack.setFontColorWithOpacity({ r: 0, g: 0, b: 0, a: 255 });
 						</code></pre>
+						<aside class="notes">
+							all measurements are absolute
+						</aside>
 					</section>
 					<section>
 						<h4>Typical <span class="emphasis">dev</span> environment</h4>
