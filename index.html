@@ -74,6 +74,9 @@
 						<li><a href="http://www.sixty.no/ease-tv">Ease TV</a></li>
 						<li>...</li>
 					</ul>
+					<aside class="notes">
+						Was working fine, strong developers were required, army of front-end devs was growing
+					</aside>
 				</section>
 				<section>
 					<section>
@@ -103,14 +106,17 @@
 					<section>
 						<h4>WPE</h4>
 						<ul>
-							<li class="fragment pros">WebKit fork</li>
-							<li class="fragment pros">remote web inspector</li>
-							<li class="fragment pros">last commit yesterday</li>
-							<li class="fragment pros">more "web-friendly"</li>
-							<li class="fragment cons">still ~180mb RAM</li>
+							<li class="fragment pros" data-fragment-index="1">WebKit fork</li>
+							<li class="fragment pros" data-fragment-index="2">remote web inspector</li>
+							<li class="fragment pros" data-fragment-index="3">last commit yesterday</li>
+							<li class="fragment pros" data-fragment-index="4">more "web-friendly"</li>
+							<li class="fragment pros" data-fragment-index="5">empty page ~35mb RAM</li>
+							<li class="fragment cons" data-fragment-index="6">Browser + UI = ~180mb RAM</li>
 						</ul>
+						<img class="fragment plain" data-fragment-index="6" style="height: 30vh; display: block; margin: auto;" src="img/sad.png" />
 						<aside class="notes">
 							improved memory consumption, key events as W3C events
+							browser memory is not just a JS heap
 						</aside>
 					</section>
 					<section>
